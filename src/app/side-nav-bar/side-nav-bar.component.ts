@@ -10,14 +10,15 @@ export class SideNavBarComponent implements OnDestroy {
 
   mobileQuery: MediaQueryList;
 
-  fillerNav = [{
+  fillerNav = [
+    {
+      name: 'UserDashBoard',
+      link: ['userdashboard']
+    },
+    {
     name: 'DashBoard',
     link: ['dashboard']
-  },
-  // {
-  // 	  name:"UserDashBoard",
-  // 	  link:['userdashboard']
-  // },
+    },
     {
       name: 'Billing',
       link: ['billing']
