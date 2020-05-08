@@ -1,0 +1,10 @@
+<div class="mat-card-content">
+  <div class="header"> Dash Board</div>
+  <p *ngFor="let component of titles"class="components">
+    <app-dash-board-component
+      [title]="component.title"
+      [count]="component.count"></app-dash-board-component>
+  </p>
+</div>
+
+
