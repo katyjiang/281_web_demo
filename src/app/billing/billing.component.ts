@@ -9,10 +9,10 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, item: 'Autonomous Car', price: "$30/Day"},
-  {position: 2, item: 'Autonomous Car Simulator', price: "$20/Day" },
-  {position: 3, item: 'Highway Scenario', price: "$0.25/mile" },
-  {position: 4, item: 'Local Scenario', price: "&0.55/mile" },
+  {position: 1, item: 'Autonomous Car', price: '$3/hr'},
+  {position: 2, item: 'Autonomous Car Simulator', price: '$2/hr' },
+  {position: 3, item: 'Highway Scenario', price: '$0.25/mile' },
+  {position: 4, item: 'Local Scenario', price: '&0.55/mile' },
 ];
 @Component({
   selector: 'app-billing',
@@ -20,7 +20,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./billing.component.scss']
 })
 export class BillingComponent implements OnInit {
-  title = "Billing & Cost Management Dashboard"
+  title = 'Customize Your Billing Model';
   displayedColumns: string[] = ['select', 'position', 'item', 'price'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(true, []);

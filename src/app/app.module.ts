@@ -65,6 +65,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {fakeBackendProvider} from './_helpers/fake-backend';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
+import { BillingDetailComponent } from './billing/billing-detail/billing-detail.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import {JwtInterceptor} from './_helpers/jwt.interceptor';
     UserDashboardComponent,
     AlertComponent,
     ListComponent,
-    HomeComponent
+    HomeComponent,
+    BillingDetailComponent
   ],
   imports: [
 

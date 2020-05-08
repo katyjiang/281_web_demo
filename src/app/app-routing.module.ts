@@ -8,12 +8,13 @@ import { SimulationsComponent } from './simulations/simulations.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_helpers/auth.guard';
+import {BillingDetailComponent} from './billing/billing-detail/billing-detail.component';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', loadChildren: usersModule, canActivate: [AuthGuard] },
   {
     path: 'users',
     loadChildren: usersModule,
@@ -24,8 +25,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: UserDashboardComponent
- // 	data: {title: 'User Dashboard'}
+    loadChildren: usersModule
+    // 	data: {title: 'User Dashboard'}
   },
   {
     path: 'dashboard',
@@ -43,7 +44,10 @@ const routes: Routes = [
     path: 'simulations',
     component: SimulationsComponent//  data: {title: 'List of simulations'}
   },
-
+  {
+    path: 'billingdetail',
+    component: BillingDetailComponent//  data: {title: 'List of simulations'}
+  },
  {
    path: '**',
    redirectTo: ''
