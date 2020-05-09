@@ -10,6 +10,7 @@ export interface Transaction {
   styleUrls: ['./billing-detail.component.scss']
 })
 export class BillingDetailComponent implements OnInit {
+  title = 'Your Current Billing';
   displayedColumns: string[] = ['item', 'usage', 'cost'];
   transactions: Transaction[] = [
     {item: 'Autonomous Car', usage: '3 cars / 10 hr', cost: 90},

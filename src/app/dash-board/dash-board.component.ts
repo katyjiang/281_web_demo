@@ -11,7 +11,7 @@ export class DashBoardComponent implements OnInit {
     count: "949"
   },
     {
-      title: "Autonomous Car Simulator",
+      title: "Autonomous Simulator",
       count: "1049"
     },
     {
