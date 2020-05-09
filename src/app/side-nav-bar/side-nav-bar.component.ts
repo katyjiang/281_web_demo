@@ -16,7 +16,7 @@ export class SideNavBarComponent implements OnDestroy {
       link: ['userdashboard']
     },
     {
-    name: 'DashBoard',
+    name: 'SystemDashBoard',
     link: ['dashboard']
     },
     {
