@@ -66,6 +66,7 @@ import {fakeBackendProvider} from './_helpers/fake-backend';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import { BillingDetailComponent } from './billing/billing-detail/billing-detail.component';
+import { AddCarsComponent } from './add-cars/add-cars.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { BillingDetailComponent } from './billing/billing-detail/billing-detail.
     AlertComponent,
     ListComponent,
     HomeComponent,
-    BillingDetailComponent
+    BillingDetailComponent,
+    AddCarsComponent
   ],
   imports: [
 
