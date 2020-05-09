@@ -9,6 +9,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import {BillingDetailComponent} from './billing/billing-detail/billing-detail.component';
+import {PaymentComponent} from './billing/payment/payment.component';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     path: 'billingdetail',
     component: BillingDetailComponent//  data: {title: 'List of simulations'}
+  },
+  {
+    path: 'checkout',
+    component: PaymentComponent//  data: {title: 'List of simulations'}
   },
  {
    path: '**',

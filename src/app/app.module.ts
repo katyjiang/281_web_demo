@@ -54,7 +54,6 @@ import { LoginComponent } from './login/login.component';
 import { CarCatalogComponent } from './car-catalog/car-catalog.component';
 import { SimulationsComponent } from './simulations/simulations.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { HttpClientModule } from '@angular/common/http';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AlertComponent } from './_components/alert.component';
 import { HomeComponent } from './home/home.component';
@@ -66,7 +65,11 @@ import {fakeBackendProvider} from './_helpers/fake-backend';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import { BillingDetailComponent } from './billing/billing-detail/billing-detail.component';
+
 import { AddCarsComponent } from './add-cars/add-cars.component';
+
+import { PaymentComponent } from './billing/payment/payment.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -84,6 +87,8 @@ import { AddCarsComponent } from './add-cars/add-cars.component';
     HomeComponent,
     BillingDetailComponent,
     AddCarsComponent
+    PaymentComponent
+
   ],
   imports: [
 
