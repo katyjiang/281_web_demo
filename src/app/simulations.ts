@@ -1,6 +1,7 @@
 export class Simulations{
-	_id: string;
-	carId: string;
-	runs: number;
+//	_id: string;
+	name: string;
+//	carId: string;
+	totalRun: number;
 	createdBy: string;
 }

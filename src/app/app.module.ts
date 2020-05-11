@@ -65,8 +65,10 @@ import {fakeBackendProvider} from './_helpers/fake-backend';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import { BillingDetailComponent } from './billing/billing-detail/billing-detail.component';
+import { AddCarsComponent } from './add-cars/add-cars.component';
 import { PaymentComponent } from './billing/payment/payment.component';
 import {RouterModule} from '@angular/router';
+import { AddSimulationsComponent } from './add-simulations/add-simulations.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,10 @@ import {RouterModule} from '@angular/router';
     ListComponent,
     HomeComponent,
     BillingDetailComponent,
-    PaymentComponent
+    AddCarsComponent,
+    PaymentComponent,
+    AddSimulationsComponent
+
   ],
   imports: [
 

@@ -2,10 +2,11 @@
   <h2>Simulation Manager</h2>
   <div class="example-loading-shade"
        *ngIf="isLoadingResults">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    <!--mat-spinner *ngIf="isLoadingResults"></mat-spinner-->
   </div>
   <div class="button-row">
-    <a mat-flat-button color="primary" [routerLink]="['/add-simulations']"><mat-icon>add</mat-icon> Request</a>
+    <!--a mat-flat-button color="primary" [routerLink]="['/add-simulation']"><mat-icon>add</mat-icon> Request</a-->
+	<button mat-raised-button routerLink="../add-simulation" color="primary"><mat-icon>add</mat-icon> Request</button>
     <a mat-flat-button color="accent" [routerLink]="['/delete-simulations']"><mat-icon>delete</mat-icon> Release</a>
   </div>
   <div class="mat-elevation-z8">
@@ -31,7 +32,7 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/home/', row._id]"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   </div>
 </div>

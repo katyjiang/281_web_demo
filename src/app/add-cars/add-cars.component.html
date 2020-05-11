@@ -1,0 +1,64 @@
+<div class="example-container mat-elevation-z8">
+  <h2>Add Cars</h2>
+  <!--div class="example-loading-shade"
+        *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div-->
+  <div class="button-row">
+    <!--a mat-flat-button color="primary" [routerLink]="['/cars']"><mat-icon>list</mat-icon></a-->
+	<button mat-raised-button routerLink="../carcatalog" color="primary"><mat-icon>list</mat-icon></button>
+  </div>
+  <mat-card class="example-card">
+    <form [formGroup]="carsForm" (ngSubmit)="onFormSubmit()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+                <!--[errorStateMatcher]="matcher"-->
+        <mat-error>
+          <span *ngIf="!carsForm.get('name').valid && carsForm.get('name').touched">Please enter Name</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Type</mat-label>
+        <mat-select formControlName="type">
+          <mat-option *ngFor="let gl of typeList" [value]="gl">
+            {{gl}}
+          </mat-option>
+        </mat-select>
+        <mat-error>
+          <span *ngIf="!carsForm.get('type').valid && carsForm.get('type').touched">Please choose Type</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Size</mat-label>
+        <input matInput placeholder="small" formControlName="size">
+                <!--[errorStateMatcher]="matcher"-->
+        <mat-error>
+          <span *ngIf="!carsForm.get('size').valid && carsForm.get('size').touched">Please enter Size</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Manufacture</mat-label>
+        <input matInput placeholder="Toyota" formControlName="manufacture">
+                <!--[errorStateMatcher]="matcher"-->
+        <mat-error>
+          <span *ngIf="!carsForm.get('manufacture').valid && carsForm.get('manufacture').touched">Please enter Manufacture</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option *ngFor="let sl of statusList" [value]="sl">
+            {{sl}}
+          </mat-option>
+        </mat-select>
+        <mat-error>
+          <span *ngIf="!carsForm.get('status').valid && carsForm.get('status').touched">Please select Status</span>
+        </mat-error>
+      </mat-form-field>
+      <div class="button-row">
+        <button type="submit" [disabled]="!carsForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+      </div>
+    </form>
+  </mat-card>
+</div>
