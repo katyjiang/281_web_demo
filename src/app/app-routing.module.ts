@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_helpers/auth.guard';
 import {BillingDetailComponent} from './billing/billing-detail/billing-detail.component';
 import {PaymentComponent} from './billing/payment/payment.component';
+import { AddCarsComponent } from './add-cars/add-cars.component';
+import { AddSimulationsComponent } from './add-simulations/add-simulations.component';
 
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
@@ -52,6 +54,14 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: PaymentComponent//  data: {title: 'List of simulations'}
+  },
+  {
+	  path: 'add-cars',
+	  component: AddCarsComponent 
+  },
+  {
+	  path: 'add-simulation',
+	  component: AddSimulationsComponent
   },
  {
    path: '**',

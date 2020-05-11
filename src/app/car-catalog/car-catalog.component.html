@@ -5,8 +5,9 @@
     <!--mat-spinner *ngIf="isLoadingResults"></mat-spinner-->
   </div>
   <div class="button-row">
-    <a mat-flat-button color="primary" [routerLink]="['add-cars']"><mat-icon>add</mat-icon> Cars</a>
-    <a mat-flat-button color="accent" [routerLink]="['delete-cars']"><mat-icon>delete</mat-icon>Remove</a>
+    <!--a mat-flat-button color="primary" [routerLink="['../add-cars']"><mat-icon>add</mat-icon> Cars</a-->
+	 <button mat-raised-button routerLink="../add-cars" color="primary"><mat-icon>add</mat-icon> Cars</button>
+    <a mat-flat-button color="accent" [routerLink]="['/delete-cars']"><mat-icon>delete</mat-icon>Remove</a>
   </div>
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="data" class="example-table"
@@ -43,7 +44,7 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/cars-details/', row._id]"></tr>
     </table>
   </div>
 </div>

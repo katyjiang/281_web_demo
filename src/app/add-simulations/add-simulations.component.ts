@@ -5,22 +5,16 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 import { ErrorStateMatcher } from '@angular/material/core';
 
 @Component({
-  selector: 'app-add-cars',
-  templateUrl: './add-cars.component.html',
-  styleUrls: ['./add-cars.component.scss']
+  selector: 'app-add-simulations',
+  templateUrl: './add-simulations.component.html',
+  styleUrls: ['./add-simulations.component.scss']
 })
-export class AddCarsComponent implements OnInit {
-	
-    carsForm: FormGroup;
+export class AddSimulationsComponent implements OnInit {
+    simulationsForm: FormGroup;
     name = '';
-    type = '';
+    totalRun = '';
   //  age: number = null;
-    size = '';
-    manufacture = '';
-    status = '';
-   // status = '';
-    statusList = ['Running', 'Rest', 'Manitain'];
-    typeList = ['Micro', 'RoadSter','Minivan','SuperCar','SUV','Sport', 'Truck'];
+    createdBy = '';
     isLoadingResults = false;
    // matcher = new MyErrorStateMatcher();
 
@@ -28,14 +22,10 @@ export class AddCarsComponent implements OnInit {
 
   ngOnInit(): void {
 	  //initial validation
-	  this.carsForm = this.formBuilder.group({
+	  this.simulationsForm = this.formBuilder.group({
 	        name : [null, Validators.required],
-	        type: [null, Validators.required],
-	        size : [null, Validators.required],
-	        manufacture: [null, Validators.required],
-	        status: [null, Validators.required],
-	      //  country : [null, Validators.required],
-	      //  status : [null, Validators.required]
+	        totalRun: [null, Validators.required],
+	        createdBy : [null, Validators.required],
 	      });
   }
   

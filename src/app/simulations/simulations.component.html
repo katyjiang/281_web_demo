@@ -5,7 +5,8 @@
     <!--mat-spinner *ngIf="isLoadingResults"></mat-spinner-->
   </div>
   <div class="button-row">
-    <a mat-flat-button color="primary" [routerLink]="['/add-simulations']"><mat-icon>add</mat-icon> Request</a>
+    <!--a mat-flat-button color="primary" [routerLink]="['/add-simulation']"><mat-icon>add</mat-icon> Request</a-->
+	<button mat-raised-button routerLink="../add-simulation" color="primary"><mat-icon>add</mat-icon> Request</button>
     <a mat-flat-button color="accent" [routerLink]="['/delete-simulations']"><mat-icon>delete</mat-icon> Release</a>
   </div>
   <div class="mat-elevation-z8">

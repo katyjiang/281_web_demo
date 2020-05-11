@@ -1,5 +1,5 @@
 export class Cars{
-	_id: string;
+	_id: number;
 	name: string;
 	type: string;
 	size: string;

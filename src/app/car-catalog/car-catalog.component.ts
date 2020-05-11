@@ -12,6 +12,7 @@ export class CarCatalogComponent implements OnInit {
     displayedColumns: string[] = ['name', 'type', 'size','manufacture','status'];
     data: Cars[] = [
 		{
+			_id: 1,
 			name: 'car1',
 			type: 'sport',
 			size: 'small',
@@ -19,6 +20,7 @@ export class CarCatalogComponent implements OnInit {
 			status: 'available'
     },
 	{
+		_id:2,
 		name: 'car2',
 		type: 'suv',
 		size: 'large',
@@ -26,6 +28,7 @@ export class CarCatalogComponent implements OnInit {
 		status: 'available'
 },
 {
+	_id:3,
 		name: 'car3',
 		type: 'hybird',
 		size: 'medium',
